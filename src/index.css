@@ -45,6 +45,7 @@ html, body {
     .button-container {
       display: flex;
       flex-direction: column;
+      justify-content: space-evenly; /* Evenly distribute space between the buttons */
       align-items: center; /* Center the buttons vertically */
       width: 100%;
     }
@@ -53,7 +54,7 @@ html, body {
       border-radius: 50%; /* Make the button round */
       width: 100px; /* Set a fixed width for the side buttons */
       height: 150px; /* Set a fixed height for the side buttons */
-      padding: 100px;
+      padding: 150px;
       background-color: #fbeee0;
       border: 12px solid #0a241c;
       box-shadow: #422800 4px 4px 0 0;
