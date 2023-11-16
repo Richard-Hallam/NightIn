@@ -1,5 +1,5 @@
 import axios from "axios";
-import apiKeys from './apikey';
+import apiKeys from './apiKey';
 import getRequestTokenFromTMDB from './getRequestTokenFromTMDB';
 
 const api_key = apiKeys.key;
