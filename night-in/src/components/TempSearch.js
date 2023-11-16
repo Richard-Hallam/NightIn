@@ -9,21 +9,28 @@ function TempSearch() {
         setSearchTerm(event.target.value);
     }
 
-    const handleSearch = (event) => {
-        getMovieList();
-    }
+    const handleSearch = () => {
+          console.log(1)
+          //axios.get('https://cmd-shift-weather-app.onrender.com/forecast')
+          axios.get('https://api.themoviedb.org/3/movie/16535?api_key=0992277e30f9f06c26121fc3a6165467')
+          .then((response) => {
+            console.log(2)
+            console.log(response)
+            console.log(3)
+        
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+        
+          return}
 
     return(
-        <div className="temp-search">
-        <form onSubmit={handleSearch}>
-        <input
-        type="text"
-        value={searchTerm}
-        onChange={handleChange}
-        placeholder=""
-        />
-        <button className="submit">Search</button>
-        </form>
+        <div>
+            <form onSubmit={handleSearch}>
+                <input type="text" value={searchTerm} onChange={handleChange}/>
+                <button type="submit">Search</button>
+            </form>
             
         </div>
     )
