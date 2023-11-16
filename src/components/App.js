@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles/App.css';
-import Navbar from './components/navbar';
-import Title from './components/title';
-import TempSearch from './components/TempSearch'; //temporary just for API testing, remove at a later date
+import Navbar from './navbar';
+import Title from './title';
+import TempSearch from './TempSearch'; //temporary just for API testing, remove at a later date
 
 function App() {
   return (
