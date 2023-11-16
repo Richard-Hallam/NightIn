@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './styles/navbar.css'; // Include your Navbar CSS file
+import '../styles/navbar.css';
 
 function Navbar() {
   const [showSignup, setShowSignup] = useState(false);
