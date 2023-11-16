@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/App.css';
+import '../styles/App.css';
 import Navbar from './navbar';
 import Title from './title';
 import TempSearch from './TempSearch'; //temporary just for API testing, remove at a later date
