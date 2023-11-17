@@ -1,3 +1,6 @@
+
+import '../styles/titleCycle.css';
+
 function cycleWords() {
   const words = [
     { text: "Horror?", font: "HorrorFont" },

@@ -1,5 +1,6 @@
 import React from "react";
 import SideButton from "./matchButtons";
+import '../styles/title.css'
 
 function Title(){
     return(
@@ -8,7 +9,7 @@ function Title(){
         Time for a... <span className="underline" id="cycleText">NightIn?</span>
         </h2>
         <div>
-        <script src="./titleCycle.js"></script>
+        <script src="../scripts.js/titleCycle.js"></script>
         <SideButton />
         </div>
     </div>

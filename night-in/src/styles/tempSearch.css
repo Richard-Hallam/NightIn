@@ -1,0 +1,30 @@
+.temp-search {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.temp-search form {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-right: 20px; /* This creates a gap of 20px between the button and the search bar */
+}
+
+.temp-search input {
+  flex: 1;
+  padding-left: 30px;
+  padding-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 30px/55%; /* Adjust the values to get the desired oblong shape */
+  font-size: 12pt;
+}
+
+.temp-search button {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit {
+  margin-left: 20px;
+}

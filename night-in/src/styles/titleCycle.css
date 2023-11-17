@@ -1,0 +1,44 @@
+.HorrorFont {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .SciFiFont {
+    font-family: 'Phudu', sans-serif;
+  }
+  
+  .ComedyFont {
+    font-family: 'ComedyFont', sans-serif;
+  }
+  
+  .ThrillerFont {
+    font-family: 'Edu TAS Beginner', cursive;
+  }
+  
+  .WesternFont {
+    font-family: 'ComedyFont', sans-serif;
+  }
+  
+  .ActionFont {
+    font-family: 'Kenia', sans-serif;
+  }
+  
+  .RomanceFont {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 45pt;
+  }
+  
+  .DramaFont {
+    font-family: 'Cinzel', serif;
+  }
+  
+  .MysteryFont {
+    font-family: 'ComedyFont', sans-serif;
+  }
+  
+  .FantasyFont {
+    font-family: 'Grenze Gotisch', serif;
+  }
+  
+  .MusicalFont {
+    font-family: 'ComedyFont', sans-serif;
+  }
