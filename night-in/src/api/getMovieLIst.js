@@ -1,27 +1,27 @@
 import axios from "axios";
-import apiKeys from './apikey';
+import apiKeys from './apiKey';
 
 const api_key = apiKeys.key;
 
+//returns a list of movies 
 function getMovieList(){
-    const discoverMoviesUrl = 'https://api.themoviedb.org/3/discover/movie';
-    
-    try{
-        const response = axios.get(discoverMoviesUrl, {
-            params:{
-                api_key:api_key,
-                sort_by:'date.desc'
-            },
-        });
+    const axios = require('axios');
 
-        const movies = response.data.results;
-        //console.log('List of movies', movies);
-        return(movies);
-    }
-    catch (error) {
-        console.log('Error getting movies', error)
-    }
-}
+    let config = {
+    method: 'get',
+    maxBodyLength: Infinity,
+    url: `https://api.themoviedb.org/3/discover/movie?api_key=0992277e30f9f06c26121fc3a6165467&API Key=${apiKeys.key}`,
+    headers: { }
+    };
+
+    axios.request(config)
+    .then((response) => {
+    console.log((response.data.results));
+    })
+    .catch((error) => {
+    console.log(error);
+    });
+};
 
 
 export default getMovieList()

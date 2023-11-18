@@ -1,5 +1,5 @@
 import axios from "axios";
-import apiKeys from './apikey';
+import apiKeys from './apiKey';
 
 
 async function getMovieInfo(movie_id){
