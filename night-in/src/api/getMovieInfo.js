@@ -1,21 +1,20 @@
 import axios from "axios";
 import apiKeys from './apiKey';
 
+//test film_Id: 16535
 
-async function getMovieInfo(movie_id){
+function getMovieInfo(movie_id){
 
 
-    let config = {
+    const config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: 'https://api.themoviedb.org/3/movie/16535?api_key=0992277e30f9f06c26121fc3a6165467',
+        url: `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apiKeys.key}`,
         headers: { }
       };
-      console.log(1)
-      const response = await axios.request(config)
-      console.log(2)
+      const response = axios.request(config)
       .then((response) => {
-        console.log(response)
+        console.log(response.data)
     
       })
       .catch((error) => {
@@ -26,19 +25,6 @@ async function getMovieInfo(movie_id){
       return response
 
 
-    // const movieInfoUrl = `https://api.themoviedb.org/3/movie/${movie_id}`;
-    
-    // try{
-    //     const response = await axios.get(movieInfoUrl, {
-    //         params:{
-    //             api_key: apiKeys.key,
-    //         },
-    //     });
-    //     const movieInfo = response;
-    //     console.log('Movie information:', movieInfo);
-    // } catch (error) {
-    //     console.error('Error getting movie info', error);
-    // }
 }
 
 export default getMovieInfo

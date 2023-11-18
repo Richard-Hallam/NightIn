@@ -24,4 +24,4 @@ function getMovieList(){
 };
 
 
-export default getMovieList()
+export default getMovieList
