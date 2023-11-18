@@ -1,5 +1,5 @@
 import axios from "axios";
-import apiKeys from '../../night-in/src/api/apikey';
+import apiKeys from './apiKey';
 
 
 async function getMovieInfo(movie_id){
