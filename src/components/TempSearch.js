@@ -9,17 +9,15 @@ function TempSearch() {
         setSearchTerm(event.target.value);
     }
 
-    const handleSearch = (event) => {
+    const handleSearch = () => {
         getMovieList();
-        getMovieInfo()
-        //getMovieInfo(16535)
+        getMovieInfo(16535)
     }
 
     return(
         <div>
             <input type="text" value={searchTerm} onChange={handleChange}/>
             <button type="button" onClick={handleSearch}>Search</button>
-            
         </div>
     )
 }
