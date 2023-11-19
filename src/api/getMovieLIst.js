@@ -16,7 +16,7 @@ function getMovieList(){
 
     axios.request(config)
     .then((response) => {
-    console.log((response.data.results));
+    console.log((response.data.results.id, response.data.results.title));
     })
     .catch((error) => {
     console.log(error);
