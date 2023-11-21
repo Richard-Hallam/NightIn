@@ -2,11 +2,23 @@
   background-color: antiquewhite;
   display: grid; 
   height: 100vh; /* Set the height of the container to 100vh */
+  width: 100vw;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
   grid-template-rows: 50vh 50vh; /* Each row takes up 50vh */
   gap: 20px 20px; 
   grid-template-areas: 
-    ". . . . ."
-    ". . . . ."; 
+    "film1 film2 film3 film4 film5"
+    "film6 film7 film8 film9 film10";
 }
 
+/* Individual film grid areas */
+.film1 { grid-area: film1; }
+.film2 { grid-area: film2; }
+.film3 { grid-area: film3; }
+.film4 { grid-area: film4; }
+.film5 { grid-area: film5; }
+.film6 { grid-area: film6; }
+.film7 { grid-area: film7; }
+.film8 { grid-area: film8; }
+.film9 { grid-area: film9; }
+.film10 { grid-area: film10; }
