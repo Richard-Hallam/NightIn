@@ -10,11 +10,22 @@ function getMovieInfo(movie_id){
         url: `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apiKeys.Key}`,
         headers: { }
       };
-      const response = axios.request(config)
+      axios.request(config)
       .then((response) => {
-        console.log(response.data)
-    
-      })
+        const films = response.data.results.map(movie => {
+          console.log(2)
+            return {
+                id: movie.id,
+                title: movie.title,
+                releaseDate: movie.releaseDate,
+                overview: movie.overview,
+                voteAverage: movie.voteAverage,
+                imdb_id:movie.imdb_id,
+                imageUrl: movie.backdrop_path,
+            }
+
+        }
+        )})
       .catch((error) => {
         console.log('error getting movie info')
         console.log(error);

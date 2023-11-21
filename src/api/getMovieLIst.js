@@ -3,7 +3,6 @@ import apiKeys from './apiKey';
 
 const api_key = apiKeys.key;
 
-//returns a list of movies 
 function getMovieList(){
     const axios = require('axios');
 
@@ -16,7 +15,16 @@ function getMovieList(){
 
     axios.request(config)
     .then((response) => {
-    console.log((response.data.results.id, response.data.results.title));
+        const films = response.data.results.map(movie => {
+            return {
+                id: movie.id,
+                title: movie.title,
+                releaseDate: movie.releaseDate,
+                overview: movie.overview,
+                voteAverage: movie.voteAverage,
+            }
+        })
+    console.log((films));
     })
     .catch((error) => {
     console.log(error);
