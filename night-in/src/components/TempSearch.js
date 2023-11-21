@@ -20,7 +20,7 @@ function TempSearch() {
         type="text"
         value={searchTerm}
         onChange={handleChange}
-        placeholder=""
+        placeholder="What 'ya fancy?"
         />
         <button className="submit">Search</button>
         </form>

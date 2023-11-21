@@ -128,7 +128,7 @@ html, body {
   font-size: 50pt;
   padding: 10px;
   background-color: rgb(41, 64, 77);
-  height: 100%;
+  height: 100vh;
 }
 
 .underline {
