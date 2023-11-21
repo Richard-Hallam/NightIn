@@ -1,13 +1,12 @@
-.results {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    gap: 20px 20px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      ". . . . ."
-      ". . . . .";
-      background-color: antiquewhite;
-  }
-  
+.results-div {
+  background-color: antiquewhite;
+  display: grid; 
+  height: 100vh; /* Set the height of the container to 100vh */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 50vh 50vh; /* Each row takes up 50vh */
+  gap: 20px 20px; 
+  grid-template-areas: 
+    ". . . . ."
+    ". . . . ."; 
+}
+

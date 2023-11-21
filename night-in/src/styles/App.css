@@ -2,10 +2,7 @@ html, body {
   margin-top: 0%;
   background-color: rgb(255, 255, 255);
   font-family: 'DM Serif Display', serif;
-  overflow: hidden;
   height: 100vh;
-  margin: 0;
-  padding: 0;
 }
 .homepage {
   display: grid;
@@ -16,8 +13,17 @@ html, body {
     "navbar navbar navbar"
     "title title title"
     ". match-button .";
+
   justify-items: stretch;
   height: 100vh;
+  width: 100vw;
+}
+
+.results-div {
+  grid-area: full-height; /* You can set the grid area according to your layout */
+  height: 100vh;
+  width: 100vw;
+  /* Other styles as needed */
 }
 
 
