@@ -1,3 +1,5 @@
+//Getting started point 2 'Configeration' needs updating. 
+
 # NightIn XD
 
 # NightIn Web App README
