@@ -1,7 +1,6 @@
 html, body {
   margin-top: 0%;
   background-color: white;
-  font-family: 'DM Serif Display', serif;
   overflow: auto;
   height: 100%;
   margin: 0;
@@ -51,23 +50,7 @@ html, body {
   font-size: 45pt;
   margin: 0;
   text-decoration: underline;
-  text-align: left;
-}
 
-.brand-match {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . ."
-    ". . ."
-    ". . .";
-  grid-area: brand-match;
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 5%;
 }
 
 .navbuttons {
@@ -88,7 +71,6 @@ html, body {
   font-weight: 600;
   font-size: 18px;
   padding: 0 20px;
-  line-height: 50px;
   text-align: center;
   text-decoration: none;
   user-select: none;
@@ -116,24 +98,6 @@ html, body {
     min-width: 120px;
     padding: 0 25px;
   }
-}
-
-.title {
-  grid-area: title;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: aliceblue;
-  font-size: 50pt;
-  padding: 10px;
-  background-color: rgb(41, 64, 77);
-  height: 100vh;
-}
-
-.underline {
-  text-decoration: underline;
-  color: antiquewhite;
 }
 
   .button-container {
@@ -212,49 +176,4 @@ html, body {
   color: antiquewhite;
   font-size: 20pt;
   background-color: rgb(41, 64, 77);
-}
-
-.HorrorFont {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.SciFiFont {
-  font-family: 'Phudu', sans-serif;
-}
-
-.ComedyFont {
-  font-family: 'ComedyFont', sans-serif;
-}
-
-.ThrillerFont {
-  font-family: 'Edu TAS Beginner', cursive;
-}
-
-.WesternFont {
-  font-family: 'ComedyFont', sans-serif;
-}
-
-.ActionFont {
-  font-family: 'Kenia', sans-serif;
-}
-
-.RomanceFont {
-  font-family: 'Cedarville Cursive', cursive;
-  font-size: 45pt;
-}
-
-.DramaFont {
-  font-family: 'Cinzel', serif;
-}
-
-.MysteryFont {
-  font-family: 'ComedyFont', sans-serif;
-}
-
-.FantasyFont {
-  font-family: 'Grenze Gotisch', serif;
-}
-
-.MusicalFont {
-  font-family: 'ComedyFont', sans-serif;
 }

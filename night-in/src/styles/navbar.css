@@ -10,7 +10,7 @@
     "brand-match . navbuttons";
   grid-area: navbar;
   background-color: #fbeee0;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid black; 
 }
 
 
