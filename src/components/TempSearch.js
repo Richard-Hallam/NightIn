@@ -11,9 +11,9 @@ function TempSearch() {
     }
 
     const handleSearch = () => {
-        getMovieList();
-        getMovieInfo(16535);
-        getMoviesByGenre(28);
+        //getMovieList();
+        //getMovieInfo(16535);
+        getMoviesByGenre(28, 10);
     }
 
     return(

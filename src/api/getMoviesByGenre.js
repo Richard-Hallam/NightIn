@@ -1,38 +1,61 @@
 import axios from 'axios';
 import apiKeys from './apiKey';
 
-//const genresList = [28, 12, 16, 35, 80, 99, 18, 10751, 14, 36, 27, 10402, 9648, 10749, 878, 10770, 53 , 10752, 37];
+//this is just to get genre
+async function getMovieDetails(movieId) {
+  const config = {
+    method: 'get',
+    maxBodyLength: Infinity,
+    url: `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKeys.Key}&append_to_response=genres`,
+  };
 
-async function getMoviesByGenre(genreId, page) {
+  const response = await axios.request(config);
+  return response.data;
+}
 
-    let config = {
+
+async function getMoviesByGenre(genreId, totalPages) {
+  let i = 1;
+  let moviesByGenre = [];
+
+  try {
+    while (i <= totalPages) {
+      const config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: `https://api.themoviedb.org/3/discover/movie?genreId=${genreId}&api_key=${apiKeys.Key}&page=${page}`,
-        headers: { }
+        url: `https://api.themoviedb.org/3/discover/movie?with_genres=${genreId}&api_key=${apiKeys.Key}&page=${i}`,
       };
 
-      axios.request(config)
-      .then((response) => {
-        const movie = response.data.results.map(movie => {
-          });
-          console.log("beep")
-            return {
-                id: movie.id,
-                title: movie.title,
-                releaseDate: movie.release_Date,
-                overview: movie.overview,
-                voteAverage: movie.vote_Average,
-                imdb_id:movie.imdb_id,
-                imageUrl: movie.backdrop_path
-            }
-        })
-    
-    
+      const response = await axios.request(config);
 
-    .catch((error) => {
-    console.log(error);
-    })}
-      
+      const movies = await Promise.all(response.data.results.map(async movie => {
+        const movieDetails = await getMovieDetails(movie.id);
+        const genres = movieDetails.genres.map(genre => genre.name);
 
-  export default getMoviesByGenre
+        return {
+          id: movieDetails.id,
+          title: movieDetails.title,
+          releaseDate: movieDetails.release_date,
+          overview: movieDetails.overview,
+          voteAverage: movieDetails.vote_average,
+          imdb_id: movieDetails.imdb_id,
+          imageUrl: movieDetails.backdrop_path,
+          genres: genres,
+        };
+      }));
+
+      moviesByGenre.push(...movies);
+
+      //console.log(`Fetched page ${i}`);
+      i++;
+    }
+
+    //console.log(moviesByGenre);
+    return moviesByGenre;
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+
+export default getMoviesByGenre;

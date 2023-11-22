@@ -3,7 +3,7 @@ import apiKeys from './apiKey';
 
 //test film_Id: 16535
 
-function getMovieInfo(movie_id){
+async function getMovieInfo(movie_id){
     const config = {
         method: 'get',
         maxBodyLength: Infinity,
