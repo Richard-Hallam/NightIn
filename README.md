@@ -19,7 +19,7 @@ Welcome to NightIn, a React-based web app that seamlessly merges the movie-watch
 ## Getting Started:
 
 1. **Installation:**
-   - Clone this repository: `git clone https://github.com/your-username/NightIn.git`
+   - Clone this repository: `git clone https://github.com/Richard-Hallam/NightIn.git`
    - Navigate to the project directory: `cd NightIn`
    - Install dependencies: `npm install`
 

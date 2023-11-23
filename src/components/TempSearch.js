@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import '../styles/tempSearch.css'
 import getMovieList from '../api/getMovieLIst';
+import getMovieInfo from "../api/getMovieInfo";
+import getMoviesByGenre from "../api/getMoviesByGenre";
 
 function TempSearch() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -9,25 +10,18 @@ function TempSearch() {
         setSearchTerm(event.target.value);
     }
 
-    const handleSearch = (event) => {
-        getMovieList();
+    const handleSearch = () => {
+        //getMovieList();
+        //getMovieInfo(16535);
+        getMoviesByGenre(28, 10);
     }
 
     return(
-        <div className="temp-search">
-        <form onSubmit={handleSearch}>
-        <input
-        type="text"
-        value={searchTerm}
-        onChange={handleChange}
-        placeholder="What 'ya fancy?"
-        />
-        <button className="submit">Search</button>
-        </form>
-            
+        <div>
+            <input type="text" value={searchTerm} onChange={handleChange}/>
+            <button type="button" onClick={handleSearch}>Search</button>
         </div>
     )
 }
 
 export default TempSearch
-
