@@ -1,45 +1,31 @@
-import React, { useState } from "react";
-import './signupModal.css'; // Include your Modal CSS file
+import React from "react";
+import * as Survey from "survey-react"; // Import SurveyJS library
+import "survey-react/survey.css"; // Import SurveyJS CSS
 
-function Modal() {
-  const [showModal, setShowModal] = useState(false);
-
-  const toggleModal = () => {
-    setShowModal(!showModal);
+function SignupModal() {
+  // Define the survey JSON structure
+  const surveyJson = {
+    elements: [
+      {
+        name: "FirstName",
+        title: "Enter your first name:",
+        type: "text"
+      },
+      {
+        name: "LastName",
+        title: "Enter your last name:",
+        type: "text"
+      }
+    ]
   };
 
-  const handleSignup = (e) => {
-    e.preventDefault();
-    // Handle signup form submission logic here
-    // For example: sending data to backend, validation, etc.
-    console.log("Signup form submitted!");
-    setShowModal(false); // Close modal after form submission
-  };
-
+  // Render SurveyJS component with the defined survey JSON
   return (
-    <div className="page">
-      <h1>Welcome to My Website!</h1>
-      <button onClick={toggleModal}>Open Signup</button>
-
-      {showModal && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={toggleModal}>&times;</span>
-            <h2>Sign Up</h2>
-            <form onSubmit={handleSignup}>
-              {/* Your signup form fields */}
-              <label>
-                Username:
-                <input type="text" name="username" />
-              </label>
-              {/* Other input fields */}
-              <button type="submit">Submit</button>
-            </form>
-          </div>
-        </div>
-      )}
+    <div>
+      <h2>Survey</h2>
+      <Survey.Survey json={surveyJson} />
     </div>
   );
 }
 
-export default Modal;
+export default SignupModal;
