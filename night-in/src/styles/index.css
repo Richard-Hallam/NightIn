@@ -1,0 +1,179 @@
+html, body {
+  margin-top: 0%;
+  background-color: white;
+  overflow: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.homepage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 75vh 0.6fr 2.2fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "navbar navbar navbar"
+    "title title title"
+    ". match-button ."
+    "how-to how-to how-to";
+  justify-items: stretch;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 70px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "brand-match . navbuttons"
+    "brand-match . navbuttons"
+    "brand-match . navbuttons";
+  grid-area: navbar;
+  background-color: #fbeee0;
+  border: solid 4px;
+  border-color: black;
+}
+
+.navtitle {
+  font-size: 45pt;
+  margin: 0;
+  text-decoration: underline;
+
+}
+
+.navbuttons {
+  grid-area: navbuttons;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbuttons button {
+  background-color: #fbeee0;
+  border: 4px solid #0a241c;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 20px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: 'DM Serif Display', serif;
+  margin-right: 10px;
+}
+
+.navbuttons button:last-child {
+  margin-right: 0;
+}
+
+.navbuttons button:hover {
+  background-color: #ffffff;
+}
+
+.navbuttons button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .navbuttons {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+  .button-container {
+    display: flex;
+    justify-content: space-evenly; /* Evenly distribute space between the buttons */
+    align-items: center; /* Center the buttons vertically */
+    width: 100%;
+  }
+
+  .side-button {
+    border-radius: 50%; /* Make the button round */
+    width: 100px; /* Set a fixed width for the side buttons */
+    height: 150px; /* Set a fixed height for the side buttons */
+    padding: 150px;
+    background-color: #fbeee0;
+    border: 12px solid #0a241c;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+  }
+
+  .side-button:hover {
+    background-color: #fff;
+  }
+  
+  .side-button:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+
+.match-button {
+  background-color: #fbeee0;
+  border: 4px solid #0a241c;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 30pt;
+}
+
+.match-button:hover {
+  background-color: #fff;
+}
+
+.match-button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .match-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+.how-to {
+  grid-area: how-to;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: antiquewhite;
+  font-size: 20pt;
+  background-color: rgb(41, 64, 77);
+}
