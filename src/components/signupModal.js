@@ -1,45 +1,61 @@
-import React, { useState } from "react";
-import './signupModal.css'; // Include your Modal CSS file
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
 
-function Modal() {
-  const [showModal, setShowModal] = useState(false);
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
 
-  const toggleModal = () => {
-    setShowModal(!showModal);
-  };
+// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement('#yourAppElement');
 
-  const handleSignup = (e) => {
-    e.preventDefault();
-    // Handle signup form submission logic here
-    // For example: sending data to backend, validation, etc.
-    console.log("Signup form submitted!");
-    setShowModal(false); // Close modal after form submission
-  };
+function App() {
+  let subtitle;
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = '#f00';
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   return (
-    <div className="page">
-      <h1>Welcome to My Website!</h1>
-      <button onClick={toggleModal}>Open Signup</button>
-
-      {showModal && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={toggleModal}>&times;</span>
-            <h2>Sign Up</h2>
-            <form onSubmit={handleSignup}>
-              {/* Your signup form fields */}
-              <label>
-                Username:
-                <input type="text" name="username" />
-              </label>
-              {/* Other input fields */}
-              <button type="submit">Submit</button>
-            </form>
-          </div>
-        </div>
-      )}
+    <div>
+      <button onClick={openModal}>Open Modal</button>
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
+        <button onClick={closeModal}>close</button>
+        <div>I am a modal</div>
+        <form>
+          <input />
+          <button>tab navigation</button>
+          <button>stays</button>
+          <button>inside</button>
+          <button>the modal</button>
+        </form>
+      </Modal>
     </div>
   );
 }
 
-export default Modal;
+ReactDOM.render(<App />);
