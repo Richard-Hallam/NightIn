@@ -1,16 +1,16 @@
 .title {
-    grid-area: title;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: aliceblue;
-    font-size: 50pt;
-    background-color: rgb(41, 64, 77);
-    
-  }
+  grid-area: title;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  font-size: 50pt;
+  background-color: rgb(41, 64, 77);
   
-  .underline {
-    text-decoration: underline;
-    color: antiquewhite;
-  }
+}
+
+.underline {
+  text-decoration: underline;
+  color: antiquewhite;
+}

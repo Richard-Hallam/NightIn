@@ -1,15 +1,15 @@
 import React from 'react';
 import '../styles/App.css';
-import Navbar from './Navbar';
-import Title from './title';
-import TempSearch from './TempSearch'; //temporary just for API testing, remove at a later date
+import Navbar from '../components/Navbar';
+import Title from '../components/title';
+import Results from '../components/Results';
 
 function App() {
   return (
     <div className="homepage">
-      <Navbar data-testid="navbar" />
-      <Title data-testid="title" />
-      <TempSearch/>
+      <Navbar/>
+      <Title />
+      <Results/>
     </div>
   );
 }
