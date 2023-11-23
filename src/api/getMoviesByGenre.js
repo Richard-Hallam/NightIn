@@ -13,17 +13,15 @@ async function getMovieDetails(movieId) {
   return response.data;
 }
 
-
 async function getMoviesByGenre(genreId, totalPages) {
   let i = 1;
-  let moviesByGenre = [];
 
   try {
     while (i <= totalPages) {
       const config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: `https://api.themoviedb.org/3/discover/movie?with_genres=${genreId}&api_key=${apiKeys.Key}&page=${i}`,
+                url: `https://api.themoviedb.org/3/discover/movie?with_genres=${genreId}&api_key=${apiKeys.Key}&page=${i}`,
       };
 
       const response = await axios.request(config);
@@ -44,14 +42,11 @@ async function getMoviesByGenre(genreId, totalPages) {
         };
       }));
 
-      moviesByGenre.push(...movies);
-
       //console.log(`Fetched page ${i}`);
       i++;
     }
 
     //console.log(moviesByGenre);
-    return moviesByGenre;
   } catch (error) {
     console.error('Error:', error);
   }
