@@ -44,7 +44,7 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="brand-match">
-        <div className="navtitle">NightIn.</div>
+        <div className="navtitle">WhittleIt.</div>
       </div>
 
       <div className="navbuttons">

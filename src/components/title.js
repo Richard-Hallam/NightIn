@@ -7,7 +7,7 @@ function Title(){
    
     <div className="title">
         <h2>
-        Time for a... <span className="underline" id="cycleText">NightIn?</span>
+        How about we...<span className="underline" id="cycleText">WhittleIt?</span>
         </h2>
         <div>
         <SideButton />
