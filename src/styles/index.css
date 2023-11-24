@@ -1,13 +1,13 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     font-family: 'DM Serif Display', serif;
   }
   
   .content {
     text-align: center;
-    color: white;
+    color: #ffffff;
     padding: 20px;
   }
   
@@ -28,12 +28,12 @@ html, body {
     .navbar {
       background-color: #fbeee0;
       border: solid 4px;
-      border-color: black;
+      border-color: #000000;
     }
   
     .title {
       font-size: 50pt;
-      background-color: rgb(41, 64, 77);
+      background-color: #29404d;
       height: 100%;
     }
   
@@ -62,7 +62,7 @@ html, body {
     }
   
     .side-button:hover {
-      background-color: #fff;
+      background-color: #ffffff;
     }
     
     .side-button:active {
@@ -97,7 +97,7 @@ html, body {
     }
     
     .match-button:hover {
-      background-color: #fff;
+      background-color: #ffffff;
     }
     
     .match-button:active {
