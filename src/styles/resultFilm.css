@@ -1,32 +1,43 @@
-.returned-film {
+.results-div {
+  grid-area: resultsfilm;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1200px; /* Adjust the max-width as needed */
+  margin: 40px;/* Adjust the margin as needed */
 }
 
-.film-container {
+.results-container {
   width: calc(25% - 20px); /* 25% width with margin */
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.film-info {
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.film-image {
-  border-radius: 8px;
+  margin-bottom: 20px; /* Margin between rows, adjust as needed */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
-.film-image img {
+.results-container:hover {
+  transform: translateY(-5px); /* Add a subtle hover effect */
+}
+
+.results-info {
+  padding: 15px; /* Padding for text content */
+}
+
+.results-info h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.results-info p {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.results-image img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 10px 10px 0 0; /* Rounded corners only at the top */
 }

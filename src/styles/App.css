@@ -1,19 +1,19 @@
 html, body {
   margin-top: 0%;
-  background-color: rgb(255, 255, 255);
+  background-color: antiquewhite;
   font-family: 'DM Serif Display', serif;
 }
 
 .homepage {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 12vh 88vh 80vh 0vh;
+  grid-template-rows: 12vh 88vh 0vh 0vh;
   gap: 0px 0px;
   grid-template-areas:
     "navbar navbar navbar"
     "title title title"
     ". match-button ."
-    "returned-film returned-film returned-film";
+    "resultsfilm resultsfilm resultsfilm";
 
   justify-items: stretch;
   width: 100vw;
