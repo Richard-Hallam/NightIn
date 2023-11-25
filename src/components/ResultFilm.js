@@ -8,7 +8,8 @@ const ResultFilm = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const movies = await getMoviesByGenre(28, 2);
+        //const movies = await getMoviesByGenre(28, 2);
+        const movies = await getMoviesByGenre()
         setFilmList(movies);
       } catch (error) {
         console.error('Error fetching movie data:', error);
@@ -18,9 +19,9 @@ const ResultFilm = () => {
     fetchData();
   }, []);
 
-  // Check if the movie data is available
+  //if there is no films in the list return an empty paragraph
   if (!filmList || filmList.length === 0) {
-    return <p>Loading...</p>; // or display an appropriate loading message
+    return <p></p>; 
   }
 
   const movie = filmList[1];
