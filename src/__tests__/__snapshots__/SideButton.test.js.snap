@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideButton component renders correctly 1`] = `
+<div>
+  <div
+    class="button-container"
+  >
+    <button
+      class="side-button"
+    >
+      <span
+        class="material-symbols-outlined"
+        style="font-size: 100pt;"
+      >
+        person_add
+      </span>
+    </button>
+    <button
+      class="match-button"
+    >
+      let's watch.
+    </button>
+  </div>
+</div>
+`;
