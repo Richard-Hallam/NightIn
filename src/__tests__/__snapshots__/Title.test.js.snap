@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title component renders correctly 1`] = `
+<div>
+  <div
+    class="title"
+  >
+    <h2>
+      How about we...
+      <span
+        class="underline"
+        id="cycleText"
+      >
+        WhittleIt?
+      </span>
+    </h2>
+    <div>
+      <div
+        class="button-container"
+      >
+        <button
+          class="side-button"
+        >
+          <span
+            class="material-symbols-outlined"
+            style="font-size: 100pt;"
+          >
+            person_add
+          </span>
+        </button>
+        <button
+          class="match-button"
+        >
+          let's watch.
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
