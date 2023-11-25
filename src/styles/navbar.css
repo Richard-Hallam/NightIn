@@ -32,7 +32,7 @@
     grid-area: brand-match;
     display: flex;
     justify-content: space-evenly;
-    padding-top: 5%;
+
   }
   
   .navbuttons {
@@ -87,5 +87,3 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-
-  
