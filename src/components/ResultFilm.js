@@ -31,15 +31,15 @@ const ResultFilm = () => {
 
 
   return (
-    <div className="returned-film">
+    <div className="results-div">
       {filmList.map((movie, index) => (
-        <div className="film-container" key={index}>
-          <div className="film-info">
+        <div className="results-container" key={index}>
+          <div className="results-info">
             <h2>{movie.title}</h2>
             <p>Release Date: {movie.releaseDate}</p>
             <p>Overview: {movie.overview}</p>
           </div>
-          <div className="film-image">
+          <div className="results-image">
             <img src={generateImageUrl(movie.imageUrl)} alt={movie.title} />
           </div>
         </div>
