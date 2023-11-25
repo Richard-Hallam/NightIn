@@ -8,8 +8,8 @@ const ResultFilm = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        //const movies = await getMoviesByGenre(28, 2);
-        const movies = await getMoviesByGenre()
+        const movies = await getMoviesByGenre(28, 2);
+        //const movies = await getMoviesByGenre()
         setFilmList(movies);
       } catch (error) {
         console.error('Error fetching movie data:', error);
@@ -30,12 +30,16 @@ const ResultFilm = () => {
 
   return (
     <div>
-      <h2>{movie.title}</h2>
-      <img src={imageUrl} alt={movie.title} />
-      <p>Release Date: {movie.releaseDate}</p>
-      <p>Overview: {movie.overview}</p>
-    </div>
-  );
+    {filmList.map((movie, index) => (
+      <div key={index}>
+        <h2>{movie.title}</h2>
+        <img src={generateImageUrl(movie.imageUrl)} alt={movie.title} />
+        <p>Release Date: {movie.releaseDate}</p>
+        <p>Overview: {movie.overview}</p>
+      </div>
+    ))}
+  </div>
+);
 }
 
 export default ResultFilm;
