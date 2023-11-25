@@ -9,7 +9,6 @@ const ResultFilm = () => {
     const fetchData = async () => {
       try {
         const movies = await getMoviesByGenre(28, 2);
-        //const movies = await getMoviesByGenre()
         setFilmList(movies);
       } catch (error) {
         console.error('Error fetching movie data:', error);
@@ -24,14 +23,11 @@ const ResultFilm = () => {
     return <p></p>; 
   }
 
-  const movie = filmList[1];
-  const imageUrl = generateImageUrl(movie.imageUrl);
-  console.log(imageUrl)
 
   return (
     <div>
     {filmList.map((movie, index) => (
-      <div key={index}>
+      <div>
         <h2>{movie.title}</h2>
         <img src={generateImageUrl(movie.imageUrl)} alt={movie.title} />
         <p>Release Date: {movie.releaseDate}</p>
