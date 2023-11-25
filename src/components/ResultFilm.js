@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import generateImageUrl from '../api/generateImageUrl';
 import getMoviesByGenre from '../api/getMoviesByGenre';
+import "../styles/resultFilm.css";
 
 const ResultFilm = () => {
   const [filmList, setFilmList] = useState([]);
@@ -28,18 +29,23 @@ const ResultFilm = () => {
   const imageUrl = generateImageUrl(movie.imageUrl);
   console.log(imageUrl)
 
+
   return (
-    <div>
-    {filmList.map((movie, index) => (
-      <div key={index}>
-        <h2>{movie.title}</h2>
-        <img src={generateImageUrl(movie.imageUrl)} alt={movie.title} />
-        <p>Release Date: {movie.releaseDate}</p>
-        <p>Overview: {movie.overview}</p>
-      </div>
-    ))}
-  </div>
-);
+    <div className="returned-film">
+      {filmList.map((movie, index) => (
+        <div className="film-container" key={index}>
+          <div className="film-info">
+            <h2>{movie.title}</h2>
+            <p>Release Date: {movie.releaseDate}</p>
+            <p>Overview: {movie.overview}</p>
+          </div>
+          <div className="film-image">
+            <img src={generateImageUrl(movie.imageUrl)} alt={movie.title} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default ResultFilm;
