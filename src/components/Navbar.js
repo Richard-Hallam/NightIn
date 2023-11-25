@@ -44,13 +44,13 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="brand-match">
-        <div className="navtitle">NightIn.</div>
+        <div className="navtitle">WhittleIt.</div>
       </div>
 
       <div className="navbuttons">
         <button onClick={openModal}>Signup</button>
         <div className="login-button">
-          <button>Login</button>
+          <button onClick={openModal}>Login</button>
         </div>
         <div className="temp-search">
           <TempSearch />
@@ -58,18 +58,30 @@ function Navbar() {
       </div>
 
       <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Signup Modal"
-      >
-        {/* Your modal content goes here */}
-        <h2>Signup to WhittleIt</h2>
-        <button onClick={closeModal}>Close</button>
-        {/* Add your signup form or content */}
-        {/* ... */}
-      </Modal>
+  isOpen={modalIsOpen}
+  onAfterOpen={afterOpenModal}
+  onRequestClose={closeModal}
+  style={customStyles}
+  contentLabel="Signup Modal"
+>
+  {/* Your modal content goes here */}
+  <h2>Signup to WhittleIt</h2>
+  
+  <form id="myForm">
+    <label htmlFor="email">Email:</label>
+    <input type="email" id="email" name="email" required /><br /><br />
+    
+    <label htmlFor="username">Username:</label>
+    <input type="text" id="username" name="username" required /><br /><br />
+    
+    <input type="checkbox" id="terms" name="terms" />
+    <label htmlFor="terms">I agree to the terms and conditions</label><br /><br />
+    
+    <input type="submit" value="Submit" />
+  </form>
+  {/* ... */}
+</Modal>
+
     </div>
   );
 }

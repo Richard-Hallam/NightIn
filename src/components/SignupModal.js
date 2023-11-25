@@ -1,42 +1,42 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import '../styles/modalStyles.css';
+import '../styles/modalStyles.css'
 
+const customStyles = {
+  content: {
+    position: 'fixed',
+    top: '33%',
+    left: '33%',
+    width: '33%',
+    height: '33%',
+    backgroundColor: '#c0d8e0', // Pale blue background color
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    transform: 'translate(-50%, -50%)', // Make sure there's a comma after each property except the last one
+  },
+};
+
+
+// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement('#yourAppElement');
 
 function App() {
   let subtitle;
-  const [modalIsOpen, setIsOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
-  });
+  const [modalIsOpen, setIsOpen] = React.useState(false);
 
   function openModal() {
     setIsOpen(true);
   }
 
   function afterOpenModal() {
-    if (subtitle) {
-      subtitle.style.color = '#f00';
-    }
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = '#f00';
   }
 
   function closeModal() {
     setIsOpen(false);
-  }
-
-  function handleInputChange(event) {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    // Handle form submission logic here, e.g., sending data to server
-    console.log('Form submitted:', formData);
-    closeModal(); // Close modal after form submission (you can modify this behavior as needed)
   }
 
   return (
@@ -46,45 +46,22 @@ function App() {
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
+        style={customStyles}
         contentLabel="Example Modal"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Sign Up</h2>
-        <button onClick={closeModal}>Close</button>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label>Username:</label>
-            <input
-              type="text"
-              name="username"
-              value={formData.username}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div>
-            <label>Email:</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div>
-            <label>Password:</label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleInputChange}
-            />
-          </div>
-          <button type="submit">Sign Up</button>
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
+        <button onClick={closeModal}>close</button>
+        <div>I am a modal</div>
+        <form>
+          <input />
+          <button>tab navigation</button>
+          <button>stays</button>
+          <button>inside</button>
+          <button>the modal</button>
         </form>
       </Modal>
     </div>
   );
 }
 
-Modal.setAppElement('#root'); // Set the root element for the modal
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />);
