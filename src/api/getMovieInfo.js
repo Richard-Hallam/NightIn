@@ -13,7 +13,7 @@ async function getMovieInfo(movie_id){
       axios.request(config)
       .then((response) => {
         const films = response.data.results.map(movie => {
-          console.log(2)
+          console.log(films)
             return {
                 id: movie.id,
                 title: movie.title,
