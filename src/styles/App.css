@@ -36,4 +36,15 @@ html, body {
     color: white;
   
   }
+
+  @media only screen and (max-width: 600px) {
+    .button-container {
+      flex-direction: column; /* Stack buttons vertically for small screens */
+      align-items: center; /* Center buttons horizontally on small screens */
+      font-size: 20pt; /* Adjust font size for smaller screens */
+      padding: 20px 35px; /* Adjust padding for better spacing on small screens */
+      line-height: 40px; /* Adjust line height for better spacing on small screens */
+      margin-bottom: 40px; /* Add margin for better spacing on small screens */
+    }
+  }
   
