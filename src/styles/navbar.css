@@ -11,7 +11,7 @@
   grid-area: navbar;
   background-color: #fbeee0;
   border-bottom: 4px solid black;
-}
+  }
 
 
   .navtitle {
@@ -78,14 +78,31 @@
     transform: translate(2px, 2px);
   }
   
-  @media (min-width: 768px) {
-    .navbuttons {
-      min-width: 120px;
-      padding: 0 25px;
-    }
-  }
-
   .temp-search {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+    @media only screen and (max-width: 600px) {
+    .navbar {
+      grid-template-columns: 1fr; /* Change to a single column layout for small screens */
+      grid-template-areas:
+        "brand-match"
+        "navbuttons";
+      gap: 1px; /* Adjust gap for better spacing on small screens */
+    }
+  
+    .navtitle {
+      font-size: 0pt; /* Adjust font size for smaller screens */
+    }
+  
+    .navbuttons {
+      justify-content: space-around; /* Adjust alignment for better spacing on small screens */
+    }
+  
+    .navbuttons button {
+      font-size: 16px; /* Adjust font size for smaller screens */
+      padding: 0 15px; /* Adjust padding for better spacing on small screens */
+      line-height: 40px; /* Adjust line height for better spacing on small screens */
+    }
   }
