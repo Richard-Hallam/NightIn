@@ -7,7 +7,7 @@ function Title(){
    
     <div className="title">
         <h2>
-        Too many to choose? Let's...<span className="underline" id="cycleText">WhittleIt?</span>
+        Too many to choose? Let's<span className="underline" id="cycleText">WhittleIt</span>
         </h2>
         <div>
         <SideButton />
