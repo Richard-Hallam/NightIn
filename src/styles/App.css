@@ -27,6 +27,7 @@ html, body {
     justify-content: space-evenly; /* Evenly distribute space between the buttons */
     align-items: center; /* Center the buttons vertically */
     width: 100%;
+    
   }
 
   .content {
