@@ -1,20 +1,20 @@
-# NightIn
+# WhittleIt
 
-# NightIn Web App README
+# WhittleIt Web App README
 
-Welcome to NightIn, a React-based web app that seamlessly merges the movie-watching habits of two individuals to curate personalized film recommendations for the perfect NightIn experience.
+Welcome to WhittleIt, a React-based web app that allows users to streamline their list of available films, and create a catalogue of film options tailored to the users unique set of preferences. 
 
 ## Features:
 
 1. **User Profiles:** Create and personalize your user profile to reflect your unique movie preferences.
 
-2. **Connect with Friends:** Link up with friends and compare movie-watching histories to discover common interests.
+2. **Connect with Friends:** Link up with friends and compare you result lists. Find films that match everyones criteria for a quick and easy solution to that age old question "what shall we watch?"
 
-3. **API Integration:** NightIn harnesses the power of APIs to fetch and analyze movie data, ensuring a vast and up-to-date database for recommendations.
+3. **API Integration:** WhittleIt harnesses the power of APIs to fetch and analyze movie data, ensuring a vast and up-to-date database for recommendations.
 
 4. **Matching Algorithm:** Our advanced matching algorithm identifies shared interests and suggests movies that both you and your friends are likely to enjoy.
 
-5. **Real-time Suggestions:** Receive instant movie recommendations based on your collective preferences, making your NightIn planning effortless.
+5. **Real-time Suggestions:** Receive instant movie recommendations based on your collective preferences, which makes planning what to watch effortless.
 
 ## Getting Started:
 

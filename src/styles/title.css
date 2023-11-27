@@ -6,11 +6,18 @@
   align-items: center;
   color: aliceblue;
   font-size: 50pt;
-  background-color: rgb(41, 64, 77);
+  background-color: #29404d;
   
 }
 
 .underline {
-  text-decoration: underline;
+  
   color: antiquewhite;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 30pt; /* Adjust font size for smaller screens */
+    padding: 20px; /* Add padding or adjust layout as needed */
+  }
 }

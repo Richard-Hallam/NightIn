@@ -42,14 +42,13 @@ html, body {
     "brand-match . navbuttons";
   grid-area: navbar;
   background-color: #fbeee0;
-  border: solid 4px;
-  border-color: black;
+  
 }
 
 .navtitle {
   font-size: 45pt;
   margin: 0;
-  text-decoration: underline;
+  
 
 }
 
@@ -133,6 +132,7 @@ html, body {
     padding: 0 25px;
   }
 }
+
 
 .how-to {
   grid-area: how-to;
