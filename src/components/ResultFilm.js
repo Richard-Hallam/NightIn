@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import generateImageUrl from '../api/generateImageUrl';
 import getMoviesByGenre from '../api/getMoviesByGenre';
+import '../styles/resultFilm.css'
 
 const ResultFilm = () => {
   const [filmList, setFilmList] = useState([]);
