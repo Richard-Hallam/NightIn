@@ -103,7 +103,7 @@ return (
           <button onClick={() => handleButtonClick(movie)}>Get streaming data</button>
            
             <div className="streaming-data">
-              <p>Streaming Service: {streaming_link} </p>
+              <p>Streaming Service: {selectedMovie.streaming_link.} </p>
             </div>
         </div>
       ))}
