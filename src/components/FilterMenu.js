@@ -151,7 +151,13 @@ close
         </div>
           </div>
 
-          <button className="whittleit" onClick={() => handleButtonClick('WhittleIt')}>WhittleIt</button>
+          <div className="whittleit-container">
+            <button className="whittleit" onClick={() => handleButtonClick('WhittleIt')}>
+            <span class="material-symbols-outlined" style={{ fontSize: '100pt' }}>
+              arrow_circle_right
+            </span>
+            </button>
+          </div>
 
           
 
