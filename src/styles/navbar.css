@@ -40,7 +40,7 @@
   .navbuttons {
     grid-area: navbuttons;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
   }
   
@@ -82,6 +82,62 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+  @media only screen and (min-width: 769px) and (max-width: 922px) {
+
+    .navtitle {
+      font-size: 40pt; /* Adjust font size for tablets */
+      margin: 2%;
+    }
+
+    .navbuttons button {
+      font-size: 16px; /* Adjust font size for smaller screens */
+      padding: 0 15px; /* Adjust padding for better spacing on small screens */
+      line-height: 40px; /* Adjust line height for better spacing on small screens */
+    }
+
+    .temp-search {
+      padding-left: 10px;
+      padding-right: 0px;
+    }
+
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 768px) {
+     .navbar {
+    grid-template-columns: 1fr; /* Adjust the number of columns for tablets */
+    grid-template-areas:
+      "brand-match navbuttons"; /* Adjust the layout for tablets */
+    gap: 1px; /* Adjust gap for better spacing on tablets */
+    display: flex;
+  }
+
+  
+    .navtitle {
+      font-size: 20pt; /* Adjust font size for tablets */
+      margin: 2%;
+    }
+    
+    .brand-match {
+      justify-content: space-around; /* Adjust alignment for better spacing on tablets */
+    }
+  
+    .navbuttons {
+      justify-content: space-around; /* Adjust alignment for better spacing on tablets */
+      margin-left: 5px;
+    }
+  
+    .navbuttons button {
+      font-size: 16px; /* Adjust font size for tablets */
+      padding: 0 15px; /* Adjust padding for better spacing on tablets */
+      line-height: 40px; /* Adjust line height for better spacing on tablets */
+      margin-right: 10px;
+    }
+
+    .temp-search {
+      padding-left: 10px;
+      padding-right: 50px;
+    }
+  }
 
     @media only screen and (max-width: 600px) {
     .navbar {
@@ -95,7 +151,11 @@
     .navtitle {
       font-size: 0pt; /* Adjust font size for smaller screens */
     }
-  
+
+    .brand-match {
+      justify-content: space-around; /* Adjust alignment for better spacing on small screens */
+    }
+    
     .navbuttons {
       justify-content: space-around; /* Adjust alignment for better spacing on small screens */
       margin-left: 5px;
