@@ -66,7 +66,7 @@ const ResultFilm = ({ genreArr}) => {
 
   // If there are no films in the list, return an empty paragraph
   if (!filmList || filmList.length === 0) {
-    return <p>No movies found for the selected genres.</p>;
+    return <p></p>;
   }
 
   return (

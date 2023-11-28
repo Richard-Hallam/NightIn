@@ -1,3 +1,14 @@
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-button {
+  padding-right: 200px;
+}
+
+
+
 .match-button {
   background-color: #fbeee0;
   border: 4px solid #0a241c;
