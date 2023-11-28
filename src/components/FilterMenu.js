@@ -142,7 +142,7 @@ const FilterMenu = () => {
         <div className="catergories-line-4">
 <button className="clear-button" onClick={() => handleButtonClick('clear')}>Clear</button>
 <button className="collapse-button" onClick={collapseMenu}>
-<span class="material-symbols-outlined">
+  <span class="material-symbols-outlined">
 close
 </span>
 </button>
