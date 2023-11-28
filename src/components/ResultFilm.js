@@ -2,12 +2,23 @@ import React, { useEffect, useState } from 'react';
 import generateImageUrl from '../api/generateImageUrl';
 import getMoviesByGenre from '../api/getMoviesByGenre';
 import '../styles/resultFilm.css';
+import getStreamingAvailability from '../api/checkStreamingAvailability';
 
 const ResultFilm = ({ genreArr}) => {
   const [filmList, setFilmList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [voteBase, setVoteBase] = useState()
   console.log(voteBase)
+
+  const handleButtonClick = async (movie) => {
+    try {
+      const streamingData = await getStreamingAvailability(movie.imdb_id);
+      console.log('Streaming Data:', streamingData);
+    } catch (error) {
+      console.error('Error fetching streaming data:', error);
+    }
+    console.log(movie.imdb_id)
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -77,6 +88,7 @@ const ResultFilm = ({ genreArr}) => {
           <img src={generateImageUrl(movie.imageUrl)} alt={movie.title} />
           <p>Release Date: {movie.releaseDate}</p>
           <p>Overview: {movie.overview}</p>
+          <button onClick={() => handleButtonClick(movie)}>Get streaming data</button>
         </div>
       ))}
     </div>
