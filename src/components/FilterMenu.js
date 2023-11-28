@@ -1,27 +1,89 @@
 import React, { useState } from 'react';
 
 
-let autofill = '';
+let genreArr = []
+let autofill = ''
 const FilterMenu = () => {
   
   const [genre, setGenre] = useState('');
 
   const handleButtonClick = (buttons) => {
-    
-    
-
     switch (buttons) {
-      case 'action':
-        autofill = autofill + ' Action';
+      case 28:
+        autofill = autofill + 'Action ';
+        genreArr.push(28)
         break;
-      case 'adventure':
-        autofill = autofill +  ' Adventure';
+      case 12:
+        autofill = autofill +  'Adventure ';
+        genreArr.push(12)
         break;
-      case 'romance':
-        autofill = autofill + ' Romance';
+      case 10749:
+        autofill = autofill + 'Romance ';
+        genreArr.push(10749)
         break;
-      case 'crime':
-        autofill = autofill + ' Crime';
+      case 80:
+        autofill = autofill + 'Crime ';
+        genreArr.push(80)
+        break;
+      case 16:
+        autofill = autofill + 'Animation ';
+        genreArr.push(16)
+        break;
+      case 35:
+        autofill = autofill + 'Comedy ';
+        genreArr.push(35)
+        break;
+      case 99:
+        autofill = autofill + 'Documentary ';
+        genreArr.push(99)
+        break;
+      case 18:
+        autofill = autofill + 'Drama ';
+        genreArr.push(18)
+        break;
+      case 10751:
+        autofill = autofill + 'Family ';
+        genreArr.push(10751)
+        break;
+      case 14:
+        autofill = autofill + 'Fantasy ';
+        genreArr.push(14)
+        break;
+      case 36:
+        autofill = autofill + 'History ';
+        genreArr.push(36)
+        break;
+      case 27:
+        autofill = autofill + 'Horror ';
+        genreArr.push(27)
+        break;
+      case 10402:
+        autofill = autofill + 'Music';
+        genreArr.push(10402)
+        break;
+      case 9648:
+        autofill = autofill + 'Mystery ';
+        genreArr.push(9648)
+        break;
+      case 878:
+        autofill = autofill + 'Science Fiction ';
+        genreArr.push(878)
+        break;
+      case 10770:
+        autofill = autofill + 'TV Movie ';
+        genreArr.push(10770)
+        break;
+      case 53:
+        autofill = autofill + 'Thriller ';
+        genreArr.push(53)
+        break;
+      case 10752:
+        autofill = autofill + 'War ';
+        genreArr.push(10752)
+        break;
+      case 37:
+        autofill = autofill + 'Western ';
+        genreArr.push(37)
         break;
       case 'WhittleIt':
         console.log('whittling');//replace with call filterFunction that calls getMoviesByGenre and shows ResultFilm react component
@@ -53,8 +115,8 @@ const FilterMenu = () => {
       <button onClick={() => handleButtonClick(878)}>Science Fiction</button>
       <button onClick={() => handleButtonClick(10770)}>TV Movie</button>
       <button onClick={() => handleButtonClick(53)}>Thriller</button>
-      <button onClick={() => handleButtonClick(10752)}>comedy</button>
-      <button onClick={() => handleButtonClick(37)}>comedy</button>
+      <button onClick={() => handleButtonClick(10752)}>War</button>
+      <button onClick={() => handleButtonClick(37)}>Western</button>
 
 
 
