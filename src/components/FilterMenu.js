@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ResultFilm from './ResultFilm';
 
 
 let genreArr = []
@@ -6,6 +7,7 @@ let autofill = ''
 const FilterMenu = () => {
   
   const [genre, setGenre] = useState('');
+  const [genreArrState, setGenreArr] = useState([]);
 
   const handleButtonClick = (buttons) => {
     switch (buttons) {
@@ -87,6 +89,7 @@ const FilterMenu = () => {
         break;
       case 'WhittleIt':
         console.log('whittling');//replace with call filterFunction that calls getMoviesByGenre and shows ResultFilm react component
+        setGenreArr([...genreArr]); // Pass genreArr to ResultFilm
         break;
       default:
         autofill = '';
@@ -117,15 +120,12 @@ const FilterMenu = () => {
       <button onClick={() => handleButtonClick(53)}>Thriller</button>
       <button onClick={() => handleButtonClick(10752)}>War</button>
       <button onClick={() => handleButtonClick(37)}>Western</button>
-
-
-
-
       <div>
         <label>Genre: </label>
         <input type="text" value={genre} readOnly />
       </div>
       <button onClick={() => handleButtonClick('WhittleIt')}>WhittleIt</button>
+      {genreArrState.length > 0 && <ResultFilm genreArr={genreArrState} />}
     </div>
   );
 };

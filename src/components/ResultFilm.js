@@ -3,13 +3,13 @@ import generateImageUrl from '../api/generateImageUrl';
 import getMoviesByGenre from '../api/getMoviesByGenre';
 import '../styles/resultFilm.css'
 
-const ResultFilm = () => {
+const ResultFilm = ({genreArr}) => {
   const [filmList, setFilmList] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const movies = await getMoviesByGenre(28, 2);
+        const movies = await getMoviesByGenre(genreArr[0], 10);
         setFilmList(movies);
       } catch (error) {
         console.error('Error fetching movie data:', error);
@@ -17,7 +17,7 @@ const ResultFilm = () => {
     };
 
     fetchData();
-  }, []);
+  }, [genreArr]);
 
   //if there is no films in the list return an empty paragraph
   if (!filmList || filmList.length === 0) {
