@@ -9,7 +9,6 @@ const FilterMenu = () => {
   
   const [genre, setGenre] = useState('');
   const [genreArrState, setGenreArr] = useState([]);
-  const [voteBase, setVoteBase] = useState()
 
   const handleButtonClick = (buttons) => {
     switch (buttons) {
@@ -89,46 +88,6 @@ const FilterMenu = () => {
         autofill = autofill + 'Western ';
         genreArr.push(37)
         break;
-      case 1.0:
-        vote_base = 1;
-        setVoteBase(1)
-        break;
-      case 2.0:
-        vote_base = 2;
-        setVoteBase(2)
-        break;
-      case 3.0:
-        vote_base = 3;
-        setVoteBase(3)
-        break;
-      case 4.0:
-        vote_base = 4;
-        setVoteBase(4)
-        break;
-      case 5.0:
-        vote_base = 5;
-        setVoteBase(5)
-        break;
-      case 6.0:
-        vote_base = 6;
-        setVoteBase(6)
-        break;
-      case 7.0:
-        vote_base = 7;
-        setVoteBase(7)
-        break;
-      case 8.0:
-        vote_base = 8;
-        setVoteBase(8)
-        break;
-      case 9.0:
-        vote_base = 9;
-        setVoteBase(9)
-        break;
-      case 10.0:
-        vote_base = 10;
-        setVoteBase(1)
-        break;
       case 'clear':
         genreArr = []
         autofill = ''
@@ -136,14 +95,12 @@ const FilterMenu = () => {
       case 'WhittleIt':
         console.log('whittling');
         setGenreArr([...genreArr]);
-        setVoteBase([vote_base])
         break;
       default:
         autofill = '';
     }
 
     setGenre(autofill);
-
   };
 
   return (
@@ -172,19 +129,6 @@ const FilterMenu = () => {
         <label>Genre: </label>
         <input type="text" value={genre} readOnly />
       </div>
-        <button onClick={() => handleButtonClick(1.0)}>1</button>
-        <button onClick={() => handleButtonClick(2.0)}>2</button>
-        <button onClick={() => handleButtonClick(3.0)}>3</button>
-        <button onClick={() => handleButtonClick(4.0)}>4</button>
-        <button onClick={() => handleButtonClick(5.0)}>5</button>
-        <button onClick={() => handleButtonClick(6.0)}>6</button>
-        <button onClick={() => handleButtonClick(7.0)}>7</button>
-        <button onClick={() => handleButtonClick(8.0)}>8</button>
-        <button onClick={() => handleButtonClick(9.0)}>9</button>
-        <button onClick={() => handleButtonClick(10.0)}>10</button>
-        <button onClick={() => handleButtonClick('<')}>less than</button>
-        <button onClick={() => handleButtonClick('>')}>greater than</button>
-
       <div>
       </div>
       <button onClick={() => handleButtonClick('WhittleIt')}>WhittleIt</button>

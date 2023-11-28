@@ -7,17 +7,17 @@ import getStreamingAvailability from '../api/checkStreamingAvailability';
 const ResultFilm = ({ genreArr}) => {
   const [filmList, setFilmList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [voteBase, setVoteBase] = useState()
-  console.log(voteBase)
+  const [selectedMovie, setSelectedMovie] = useState(null)
 
   const handleButtonClick = async (movie) => {
     try {
       const streamingData = await getStreamingAvailability(movie.imdb_id);
       console.log('Streaming Data:', streamingData);
+      const streaming_link = streamingData.gb
+      return streaming_link
     } catch (error) {
       console.error('Error fetching streaming data:', error);
     }
-    console.log(movie.imdb_id)
   };
 
   useEffect(() => {
@@ -77,11 +77,23 @@ const ResultFilm = ({ genreArr}) => {
 
   // If there are no films in the list, return an empty paragraph
   if (!filmList || filmList.length === 0) {
-    return <p>No movies found for the selected genres.</p>;
+    return <p></p>;
   }
 
-  return (
-    <div>
+return (
+  //   <div>
+  //     {filmList.map((movie, index) => (
+  //       <div key={movie.id}>
+  //         <h2>{movie.title}</h2>
+  //         <img src={generateImageUrl(movie.imageUrl)} alt={movie.title} />
+  //         <p>Release Date: {movie.releaseDate}</p>
+  //         <p>Overview: {movie.overview}</p>
+  //         <button onClick={() => handleButtonClick(movie)}>Get streaming data</button>
+  //       </div>
+  //     ))}
+  //   </div>
+  // );
+  <div>
       {filmList.map((movie, index) => (
         <div key={movie.id}>
           <h2>{movie.title}</h2>
@@ -89,6 +101,10 @@ const ResultFilm = ({ genreArr}) => {
           <p>Release Date: {movie.releaseDate}</p>
           <p>Overview: {movie.overview}</p>
           <button onClick={() => handleButtonClick(movie)}>Get streaming data</button>
+           
+            <div className="streaming-data">
+              <p>Streaming Service: {streaming_link} </p>
+            </div>
         </div>
       ))}
     </div>

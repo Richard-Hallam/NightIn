@@ -18,7 +18,7 @@ async function getStreamingAvailability(imdbId){
     try {
         const response = await axios.request(options);
         console.log(response.data);
-        return response.data;
+        return response.data.streamingInfo;
     } catch (error) {
         console.error(error);
     }}
