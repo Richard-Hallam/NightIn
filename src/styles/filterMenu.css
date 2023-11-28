@@ -4,10 +4,17 @@
 }
 
 
-.catergories-line-1 {
+.catergories-line-2 {
   display: flex;
   justify-content: center;
 }
+
+.catergories-line-2 {
+  display: flex;
+  justify-content: center;
+}
+
+
 
 .category-buttons {
 background-color: #fbeee0;
@@ -28,9 +35,15 @@ user-select: none;
 touch-action: manipulation;
 justify-content: center;
 align-items: center;
-margin: 0px;
+margin: 10px;
 font-family: 'DM Serif Display', serif;
 font-size: 12pt;
+}
+
+.category-buttons.selected {
+  background-color: yellow; /* Change background color as desired */
+  color: black; /* Change text color as desired */
+  /* Add other styles to indicate selection */
 }
 
 .category-buttons:hover {

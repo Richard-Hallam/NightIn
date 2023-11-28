@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import generateImageUrl from '../api/generateImageUrl';
 import getMoviesByGenre from '../api/getMoviesByGenre';
 import '../styles/resultFilm.css';
+import { pulsar } from 'ldrs'
+
+pulsar.register()
 
 const ResultFilm = ({ genreArr}) => {
   const [filmList, setFilmList] = useState([]);
@@ -61,7 +64,12 @@ const ResultFilm = ({ genreArr}) => {
   }, [genreArr]);
 
   if (loading) {
-    return <p>Loading...</p>; // Show a loading indicator while data is being fetched
+    pulsar.register()
+    return <l-pulsar
+    size="150"
+    speed="1.75"
+    color="white" 
+  ></l-pulsar>
   }
 
   // If there are no films in the list, return an empty paragraph
@@ -84,3 +92,4 @@ const ResultFilm = ({ genreArr}) => {
 };
 
 export default ResultFilm;
+

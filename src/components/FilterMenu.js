@@ -141,6 +141,7 @@ const FilterMenu = () => {
 <button className="category-buttons" onClick={() => handleButtonClick(53)}>Thriller</button>
 <button className="category-buttons" onClick={() => handleButtonClick(10752)}>War</button>
 <button className="category-buttons" onClick={() => handleButtonClick(37)}>Western</button>
+        
         <div className="catergories-line-4">
 <button className="clear-button" onClick={() => handleButtonClick('clear')}>Clear</button>
 <button className="collapse-button" onClick={collapseMenu}>
@@ -164,7 +165,11 @@ close
           {genreArrState.length > 0 && <ResultFilm genreArr={genreArrState} />}
         </div>
       ) : (
-        <button className="expand-button" onClick={toggleExpand}>Expand</button>
+        <button className="expand-button" onClick={toggleExpand}>
+            <span class="material-symbols-outlined" style={{ fontSize: '100pt'}}>
+              add_circle
+            </span>
+        </button>
       )}
     </div>
   );
