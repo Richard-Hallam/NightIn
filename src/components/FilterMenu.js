@@ -91,38 +91,48 @@ const FilterMenu = () => {
         break;
       case 1.0:
         vote_base = 1;
+        setVoteBase(1)
         break;
       case 2.0:
         vote_base = 2;
+        setVoteBase(2)
         break;
       case 3.0:
         vote_base = 3;
+        setVoteBase(3)
         break;
       case 4.0:
         vote_base = 4;
+        setVoteBase(4)
         break;
       case 5.0:
         vote_base = 5;
+        setVoteBase(5)
         break;
       case 6.0:
         vote_base = 6;
+        setVoteBase(6)
         break;
       case 7.0:
         vote_base = 7;
+        setVoteBase(7)
         break;
       case 8.0:
         vote_base = 8;
+        setVoteBase(8)
         break;
       case 9.0:
         vote_base = 9;
+        setVoteBase(9)
         break;
       case 10.0:
         vote_base = 10;
+        setVoteBase(1)
         break;
       case 'WhittleIt':
         console.log('whittling');
         setGenreArr([...genreArr]);
-        setVoteBase([...vote_base])
+        setVoteBase([vote_base])
         break;
       default:
         autofill = '';
