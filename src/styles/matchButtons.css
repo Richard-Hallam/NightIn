@@ -41,11 +41,15 @@
 @media only screen and (max-width: 600px) {
   .match-button {
     font-size: 20pt; /* Adjust font size for smaller screens */
-    padding: 0 15px; /* Adjust padding for better spacing on small screens */
+    padding: 0 25px; /* Adjust padding for better spacing on small screens */
     line-height: 40px; /* Adjust line height for better spacing on small screens */
     margin-bottom: 10px; /* Add margin for better spacing on small screens */
+    margin: 40px;
+    margin-right: 130px;
+    
     justify-content: center;
     align-items: center;
+    
   }
 }
 

@@ -98,6 +98,7 @@
   
     .navbuttons {
       justify-content: space-around; /* Adjust alignment for better spacing on small screens */
+      margin-left: 5px;
     }
   
     .navbuttons button {
