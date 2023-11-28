@@ -156,7 +156,11 @@ close
           {genreArrState.length > 0 && <ResultFilm genreArr={genreArrState} />}
         </div>
       ) : (
-        <button className="expand-button" onClick={toggleExpand}>Expand</button>
+        <button className="expand-button" onClick={toggleExpand}>
+          <span className="material-symbols-outlined" style={{ fontSize: '100pt' }}>
+                    person_add
+                </span>
+        </button>
       )}
     </div>
   );
