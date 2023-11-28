@@ -43,15 +43,15 @@ const ResultFilm = ({ genreArr }) => {
             );
             i++;
           }
-          setFilmList(filteredMovies.flat()); // Use flat() to flatten the array of arrays
+          setFilmList(filteredMovies.flat()); 
         } else {
           setFilmList(movies);
         }
 
-        setLoading(false); // Set loading to false after data is fetched
+        setLoading(false); 
       } catch (error) {
         console.error('Error fetching movie data:', error);
-        setLoading(false); // Set loading to false in case of an error
+        setLoading(false); 
       }
     };
 
