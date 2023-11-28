@@ -9,7 +9,7 @@ const FilterMenu = () => {
   
   const [genre, setGenre] = useState('');
   const [genreArrState, setGenreArr] = useState([]);
-  const [voteBase, setVoteBase] = useState([])
+  const [voteBase, setVoteBase] = useState()
 
   const handleButtonClick = (buttons) => {
     switch (buttons) {
@@ -129,6 +129,10 @@ const FilterMenu = () => {
         vote_base = 10;
         setVoteBase(1)
         break;
+      case 'clear':
+        genreArr = []
+        autofill = ''
+        break;
       case 'WhittleIt':
         console.log('whittling');
         setGenreArr([...genreArr]);
@@ -163,6 +167,7 @@ const FilterMenu = () => {
       <button onClick={() => handleButtonClick(53)}>Thriller</button>
       <button onClick={() => handleButtonClick(10752)}>War</button>
       <button onClick={() => handleButtonClick(37)}>Western</button>
+      <button onClick={() => handleButtonClick('clear')}>Clear</button>
       <div>
         <label>Genre: </label>
         <input type="text" value={genre} readOnly />
