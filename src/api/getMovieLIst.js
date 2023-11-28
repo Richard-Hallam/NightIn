@@ -1,4 +1,3 @@
-import axios from "axios";
 import apiKeys from './apiKey';
 
 const api_key = apiKeys.key;
