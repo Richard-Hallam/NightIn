@@ -3,9 +3,11 @@ import generateImageUrl from '../api/generateImageUrl';
 import getMoviesByGenre from '../api/getMoviesByGenre';
 import '../styles/resultFilm.css';
 
-const ResultFilm = ({ genreArr }) => {
+const ResultFilm = ({ genreArr}) => {
   const [filmList, setFilmList] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [voteBase, setVoteBase] = useState()
+  console.log(voteBase)
 
   useEffect(() => {
     const fetchData = async () => {
