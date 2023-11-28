@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import ResultFilm from './ResultFilm';
 import '../styles/filterMenu.css';
 
+let genreArr = [];
+let autofill = '';
+
+
 const FilterMenu = () => {
   const [genre, setGenre] = useState('');
   const [genreArrState, setGenreArr] = useState([]);
   const [isExpanded, setIsExpanded] = useState(false);
 
-  let genreArr = [];
- 
-  let autofill = '';
+
 
   const handleButtonClick = (buttons) => {
     switch (buttons) {
@@ -97,8 +99,8 @@ const FilterMenu = () => {
         console.log('whittling');
         setGenreArr([...genreArr]);
         break;
-      default:
-        autofill = '';
+       default:
+
     }
 
     setGenre(autofill);
@@ -142,7 +144,7 @@ const FilterMenu = () => {
         <div className="catergories-line-4">
 <button className="clear-button" onClick={() => handleButtonClick('clear')}>Clear</button>
 <button className="collapse-button" onClick={collapseMenu}>
-<span class="material-symbols-outlined">
+<span className="material-symbols-outlined">
 close
 </span>
 </button>
