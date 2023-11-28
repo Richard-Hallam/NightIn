@@ -103,10 +103,9 @@ const FilterMenu = () => {
     <div>
       <button onClick={() => handleButtonClick(28)}>Action</button>
       <button onClick={() => handleButtonClick(12)}>Adventure</button>
-      <button onClick={() => handleButtonClick(10749)}>Romance</button>
-      <button onClick={() => handleButtonClick(80)}>Crime</button>
       <button onClick={() => handleButtonClick(16)}>Animation</button>
       <button onClick={() => handleButtonClick(35)}>Comedy</button>
+      <button onClick={() => handleButtonClick(80)}>Crime</button>
       <button onClick={() => handleButtonClick(99)}>Documentary</button>
       <button onClick={() => handleButtonClick(18)}>Drama</button>
       <button onClick={() => handleButtonClick(10751)}>Family</button>
@@ -115,6 +114,7 @@ const FilterMenu = () => {
       <button onClick={() => handleButtonClick(27)}>Horror</button>
       <button onClick={() => handleButtonClick(10402)}>Music</button>
       <button onClick={() => handleButtonClick(9648)}>Mystery</button>
+      <button onClick={() => handleButtonClick(10749)}>Romance</button>
       <button onClick={() => handleButtonClick(878)}>Science Fiction</button>
       <button onClick={() => handleButtonClick(10770)}>TV Movie</button>
       <button onClick={() => handleButtonClick(53)}>Thriller</button>

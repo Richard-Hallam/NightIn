@@ -50,7 +50,7 @@ async function getMoviesByGenre(genreId, totalPages) {
       i++;
     }
 
-    //console.log(moviesByGenre);
+    console.log(moviesByGenre);
     return moviesByGenre;
   } catch (error) {
     console.error('Error:', error);
