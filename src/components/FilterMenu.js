@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ResultFilm from './ResultFilm';
+import '../styles/filterMenu.css';
 
 
 let genreArr = [];
@@ -122,7 +123,7 @@ const FilterMenu = () => {
       case 'WhittleIt':
         console.log('whittling');
         setGenreArr([...genreArr]);
-        setVoteBase([...vote_base])
+        setVoteBase([vote_base])
         break;
       default:
         autofill = '';
@@ -133,7 +134,9 @@ const FilterMenu = () => {
   };
 
   return (
-    <div>
+    <div className="filter">
+    <div className="catergory-buttons">
+    <div className="catergories">
       <button onClick={() => handleButtonClick(28)}>Action</button>
       <button onClick={() => handleButtonClick(12)}>Adventure</button>
       <button onClick={() => handleButtonClick(16)}>Animation</button>
@@ -157,6 +160,9 @@ const FilterMenu = () => {
         <label>Genre: </label>
         <input type="text" value={genre} readOnly />
       </div>
+      </div>
+
+      <div className="numbers">
         <button onClick={() => handleButtonClick(1.0)}>1</button>
         <button onClick={() => handleButtonClick(2.0)}>2</button>
         <button onClick={() => handleButtonClick(3.0)}>3</button>
@@ -169,11 +175,13 @@ const FilterMenu = () => {
         <button onClick={() => handleButtonClick(10.0)}>10</button>
         <button onClick={() => handleButtonClick('<')}>less than</button>
         <button onClick={() => handleButtonClick('>')}>greater than</button>
+      </div>
 
       <div>
       </div>
-      <button onClick={() => handleButtonClick('WhittleIt')}>WhittleIt</button>
+      <button className="whittleit" onClick={() => handleButtonClick('WhittleIt')}>WhittleIt</button>
       {genreArrState.length > 0 && <ResultFilm genreArr={genreArrState} />}
+    </div>
     </div>
   );
 };
