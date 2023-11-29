@@ -1,6 +1,6 @@
 .filter-menu {
   min-height: 500px;
-  
+  position: relative;
 }
 
 
@@ -199,9 +199,4 @@ width: 200px;
 .whittleit:active {
   box-shadow: #422800 2px 2px 0 0;
   transform: translate(2px, 2px);
-}
-
-.returned-films {
-  display: flex;
-  grid-area: resultsfilms;
 }

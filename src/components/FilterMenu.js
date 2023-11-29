@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ResultFilm from './ResultFilm';
 import '../styles/filterMenu.css';
-import '../styles/resultFilm.css'
 
 let genreArr = [];
 let autofill = '';
@@ -162,10 +161,9 @@ close
           </div>
 
           
-         
+
           {genreArrState.length > 0 && <ResultFilm genreArr={genreArrState} />}
-          </div>
-      
+        </div>
       ) : (
         <button className="expand-button" onClick={toggleExpand}>
             <span class="material-symbols-outlined" style={{ fontSize: '100pt'}}>
@@ -178,5 +176,3 @@ close
 };
 
 export default FilterMenu;
-
-

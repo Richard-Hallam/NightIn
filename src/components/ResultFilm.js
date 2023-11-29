@@ -78,9 +78,9 @@ const ResultFilm = ({ genreArr}) => {
   }
 
   return (
-    <div className="returned-films">
+    <div>
       {filmList.map((movie, index) => (
-        <div key={movie.id} className="returned-films-item">
+        <div key={movie.id}>
           <h2>{movie.title}</h2>
           <img src={generateImageUrl(movie.imageUrl)} alt={movie.title} />
           <p>Release Date: {movie.releaseDate}</p>
