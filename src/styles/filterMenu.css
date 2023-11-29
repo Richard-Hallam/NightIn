@@ -4,16 +4,22 @@
 }
 
 
-.catergories-line-2 {
+.categories {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center the buttons horizontally */
+  
 }
 
 .catergories-line-2 {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center the buttons horizontally */
 }
 
+.catergories-line-3 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
 
 
 .category-buttons {
@@ -65,7 +71,7 @@ cursor: pointer;
 display: inline-block;
 font-weight: 600;
 font-size: 18px;
-padding: 0 18px;
+padding-right: 0 18px;
 line-height: 50px;
 text-align: center;
 text-decoration: none;

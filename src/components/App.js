@@ -3,16 +3,19 @@ import '../styles/App.css';
 import Navbar from '../components/Navbar';
 import Title from '../components/title';
 import ResultFilm from '../components/ResultFilm';
+import FilterMenu from './FilterMenu';
 
 
-function App() {
+const App = () => {
   return (
     <div className="homepage">
-      <Navbar/>
+      <Navbar />
       <Title />
-      <ResultFilm/>
+      <div className="returned-results">
+      </div>
     </div>
   );
-}
+};
+
 
 export default App;

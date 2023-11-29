@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ResultFilm from './ResultFilm';
 import '../styles/filterMenu.css';
+import '../styles/resultFilm.css'
 
 let genreArr = [];
 let autofill = '';
@@ -161,8 +162,9 @@ close
           </div>
 
           
-
+          <div className="returned-films">
           {genreArrState.length > 0 && <ResultFilm genreArr={genreArrState} />}
+          </div>
         </div>
       ) : (
         <button className="expand-button" onClick={toggleExpand}>

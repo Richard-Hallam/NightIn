@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import generateImageUrl from '../api/generateImageUrl';
 import getMoviesByGenre from '../api/getMoviesByGenre';
-import '../styles/resultFilm.css';
+import '../styles/App.css';
 import { pulsar } from 'ldrs'
 
 pulsar.register()
@@ -64,12 +64,16 @@ const ResultFilm = ({ genreArr}) => {
   }, [genreArr]);
 
   if (loading) {
-    pulsar.register()
-    return <l-pulsar
-    size="150"
-    speed="1.75"
-    color="white" 
-  ></l-pulsar>
+    return (
+      <div className="loading-container">
+        <l-pulsar
+          className="loading"
+          size="150"
+          speed="1.75"
+          color="white"
+        ></l-pulsar>
+      </div>
+    );
   }
 
   // If there are no films in the list, return an empty paragraph
@@ -78,9 +82,9 @@ const ResultFilm = ({ genreArr}) => {
   }
 
   return (
-    <div>
+    <div className="returned-films">
       {filmList.map((movie, index) => (
-        <div key={movie.id}>
+        <div key={movie.id} className="returned-films-item">
           <h2>{movie.title}</h2>
           <img src={generateImageUrl(movie.imageUrl)} alt={movie.title} />
           <p>Release Date: {movie.releaseDate}</p>

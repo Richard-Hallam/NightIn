@@ -8,10 +8,11 @@
   font-size: 50pt;
   background-color: #29404d;
   
+  
 }
 
 .underline {
-  
+  font-family: 'Pixelify Sans', sans-serif;
   color: antiquewhite;
 }
 
@@ -21,3 +22,4 @@
     padding: 20px; /* Add padding or adjust layout as needed */
   }
 }
+
