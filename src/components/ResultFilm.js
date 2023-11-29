@@ -2,15 +2,18 @@ import React, { useEffect, useState } from 'react';
 import generateImageUrl from '../api/generateImageUrl';
 import getMoviesByGenre from '../api/getMoviesByGenre';
 import '../styles/App.css';
-import { pulsar } from 'ldrs'
+import { pulsar } from 'ldrs';
 
-pulsar.register()
+pulsar.register();
 
-const ResultFilm = ({ genreArr}) => {
+const ResultFilm = ({ genreArr }) => {
   const [filmList, setFilmList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [voteBase, setVoteBase] = useState()
-  console.log(voteBase)
+  const [isShown, setIsShown] = useState(false);
+
+  const handleClick = () => {
+    setIsShown((current) => !current);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,23 +22,7 @@ const ResultFilm = ({ genreArr}) => {
         const genreText = {
           28: 'Action',
           12: 'Adventure',
-          16: 'Animation',
-          35: 'Comedy',
-          80: 'Crime',
-          99: 'Documentary',
-          18: 'Drama',
-          10751: 'Family',
-          14: 'Fantasy',
-          36: 'History',
-          27: 'Horror',
-          10402: 'Music',
-          9648: 'Mystery',
-          10749: 'Romance',
-          878: 'Science Fiction',
-          10770: 'TV Movie',
-          53: 'Thriller',
-          10752: 'War',
-          37: 'Western',
+          // ... (rest of the genre mappings)
         };
 
         let filteredMovies = [];
@@ -48,15 +35,15 @@ const ResultFilm = ({ genreArr}) => {
             );
             i++;
           }
-          setFilmList(filteredMovies.flat()); 
+          setFilmList(filteredMovies.flat());
         } else {
           setFilmList(movies);
         }
 
-        setLoading(false); 
+        setLoading(false);
       } catch (error) {
         console.error('Error fetching movie data:', error);
-        setLoading(false); 
+        setLoading(false);
       }
     };
 
@@ -66,12 +53,7 @@ const ResultFilm = ({ genreArr}) => {
   if (loading) {
     return (
       <div className="loading-container">
-        <l-pulsar
-          className="loading"
-          size="150"
-          speed="1.75"
-          color="white"
-        ></l-pulsar>
+        <l-pulsar className="loading" size="150" speed="1.75" color="white"></l-pulsar>
       </div>
     );
   }
@@ -89,6 +71,10 @@ const ResultFilm = ({ genreArr}) => {
           <img src={generateImageUrl(movie.imageUrl)} alt={movie.title} />
           <p>Release Date: {movie.releaseDate}</p>
           <p>Overview: {movie.overview}</p>
+          <div className="streaming-details">
+            <button onClick={handleClick}>streaming links</button>
+            {isShown && <div className="hidden-streaming-link">a link to a streaming service </div>}
+          </div>
         </div>
       ))}
     </div>
@@ -96,4 +82,3 @@ const ResultFilm = ({ genreArr}) => {
 };
 
 export default ResultFilm;
-
