@@ -1,48 +1,57 @@
 .returned-films {
-  grid-area: returned-results;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .returned-films-item {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   width: calc(30% - 20px);
-  background-color: #3c4e58;
-  border-radius: 40px;
+  margin-bottom: 20px;
+  background-color: #fbeee0;
+  border-radius: 20px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   padding: 15px;
-  box-shadow: 4px 4px 0 0 #382518; 
+  box-shadow: 4px 4px 0 0 #382518;
   border: 4px solid #0a241c;
-  background-color: #fbeee0;
   color: #422800;
+  box-sizing: border-box;
 }
 
 .returned-films-item:hover {
-  transform: translateY(-12px); 
+  transform: translateY(-10px);
 }
+
 .returned-films-item h2 {
-  margin: 30px;
-  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
   font-weight: bold;
   color: #ec710c;
-  justify-content: center;
+  text-align: center;
 }
 
 .returned-films-item p {
-  margin-bottom: 8px;
-  font-size: 25px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .returned-films-item img {
   width: 100%;
   height: auto;
-  border-radius: 40px 40px 40px 40px; 
+  border-radius: 20px;
 }
+
 
 .returned-films-date {
   font-family: 'Courier New', Courier, monospace;
   color: #ec710c;
 }
 
+@media screen and (max-width: 480px) {
+  .returned-films-item {
+    width: calc(100% - 20px);
+  }
+}
