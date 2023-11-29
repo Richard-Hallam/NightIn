@@ -5,7 +5,6 @@ import React, { useState, useEffect } from 'react';
       const [isLoading, setIsLoading] = useState(true);
     
       useEffect(() => {
-        // Simulate an API call
         setTimeout(() => {
           setIsLoading(false);
         }, 2000);

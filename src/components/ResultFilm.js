@@ -87,10 +87,10 @@ const ResultFilm = ({ genreArr }) => {
           <img src={generateImageUrl(movie.imageUrl)} alt={movie.title} />
           <p className="returned-films-date">Release Date: {movie.releaseDate}</p>
           <p>Overview: {movie.overview}</p>
-          <div className="streaming-details">
+          {/* <div className="streaming-details">
             <button onClick={handleClick}>streaming links</button>
             {isShown && <div className="hidden-streaming-link">a link to a streaming service </div>}
-          </div>
+          </div> */}
         </div>
       ))}
     </div>
