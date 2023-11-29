@@ -18,8 +18,8 @@
 
 @media only screen and (max-width: 600px) {
   .title {
-    font-size: 30pt; /* Adjust font size for smaller screens */
-    padding: 20px; /* Add padding or adjust layout as needed */
+    font-size: 30pt; 
+    padding: 20px; 
   }
 }
 

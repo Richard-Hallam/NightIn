@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ResultFilm from './ResultFilm';
 import '../styles/filterMenu.css';
 import '../styles/resultFilm.css'
+import HighlightButton from './highlightButton';
 
 let genreArr = [];
 let autofill = '';
@@ -11,6 +12,7 @@ const FilterMenu = () => {
   const [genre, setGenre] = useState('');
   const [genreArrState, setGenreArr] = useState([]);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
 
 
@@ -115,58 +117,59 @@ const FilterMenu = () => {
     setIsExpanded(false);
   };
 
+  const toggleSelectionAndHandleClick = (categoryId) => {
+    setSelectedCategory(categoryId);
+    handleButtonClick(categoryId);
+  };
+
   return (
     <div className="filter-menu">
       {isExpanded ? (
         <div className="expanded-menu">
-          <div className="categories">
-          <button className="category-buttons" onClick={() => handleButtonClick(12)}>Adventure</button>
-<button className="category-buttons" onClick={() => handleButtonClick(16)}>Animation</button>
-<button className="category-buttons" onClick={() => handleButtonClick(35)}>Comedy</button>
-<button className="category-buttons" onClick={() => handleButtonClick(80)}>Crime</button>
-<button className="category-buttons" onClick={() => handleButtonClick(99)}>Documentary</button>
-<button className="category-buttons" onClick={() => handleButtonClick(18)}>Drama</button>
-<button className="category-buttons" onClick={() => handleButtonClick(10751)}>Family</button>
-        </div>
-        <div className="catergories-line-2">
-<button className="category-buttons" onClick={() => handleButtonClick(14)}>Fantasy</button>
-<button className="category-buttons" onClick={() => handleButtonClick(36)}>History</button>
-<button className="category-buttons" onClick={() => handleButtonClick(27)}>Horror</button>
-<button className="category-buttons" onClick={() => handleButtonClick(10402)}>Music</button>
-<button className="category-buttons" onClick={() => handleButtonClick(9648)}>Mystery</button>
-        </div>
-        <div className="catergories-line-3">
-<button className="category-buttons" onClick={() => handleButtonClick(10749)}>Romance</button>
-<button className="category-buttons" onClick={() => handleButtonClick(878)}>Science Fiction</button>
-<button className="category-buttons" onClick={() => handleButtonClick(10770)}>TV Movie</button>
-<button className="category-buttons" onClick={() => handleButtonClick(53)}>Thriller</button>
-<button className="category-buttons" onClick={() => handleButtonClick(10752)}>War</button>
-<button className="category-buttons" onClick={() => handleButtonClick(37)}>Western</button>
-        
-        <div className="catergories-line-4">
-<button className="clear-button" onClick={() => handleButtonClick('clear')}>Clear</button>
-<button className="collapse-button" onClick={collapseMenu}>
-<span className="material-symbols-outlined">
-close
-</span>
-</button>
-        </div>
-          </div>
+          <HighlightButton/>
+     <div className="categories">
+  <button className={`category-buttons ${selectedCategory === 12 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(12)}>Adventure</button>
+  <button className={`category-buttons ${selectedCategory === 16 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(16)}>Animation</button>
+  <button className={`category-buttons ${selectedCategory === 35 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(35)}>Comedy</button>
+  <button className={`category-buttons ${selectedCategory === 80 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(80)}>Crime</button>
+  <button className={`category-buttons ${selectedCategory === 99 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(99)}>Documentary</button>
+  <button className={`category-buttons ${selectedCategory === 18 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(18)}>Drama</button>
+  <button className={`category-buttons ${selectedCategory === 10751 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(10751)}>Family</button>
+</div>
 
-          <div className="whittleit-container">
-            <button className="whittleit" onClick={() => handleButtonClick('WhittleIt')}>
-            <span class="material-symbols-outlined" style={{ fontSize: '100pt' }}>
-              arrow_circle_right
-            </span>
+<div className="categories-line-2">
+  <button className={`category-buttons ${selectedCategory === 14 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(14)}>Fantasy</button>
+  <button className={`category-buttons ${selectedCategory === 36 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(36)}>History</button>
+  <button className={`category-buttons ${selectedCategory === 27 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(27)}>Horror</button>
+  <button className={`category-buttons ${selectedCategory === 10402 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(10402)}>Music</button>
+  <button className={`category-buttons ${selectedCategory === 9648 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(9648)}>Mystery</button>
+</div>
+
+      <div className="categories-line-3">
+  <button className={`category-buttons ${selectedCategory === 10749 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(10749)}>Romance</button>
+  <button className={`category-buttons ${selectedCategory === 878 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(878)}>Science Fiction</button>
+  <button className={`category-buttons ${selectedCategory === 10770 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(10770)}>TV Movie</button>
+  <button className={`category-buttons ${selectedCategory === 53 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(53)}>Thriller</button>
+  <button className={`category-buttons ${selectedCategory === 10752 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(10752)}>War</button>
+  <button className={`category-buttons ${selectedCategory === 37 ? 'selected' : ''}`} onClick={() => toggleSelectionAndHandleClick(37)}>Western</button>
+</div>
+          <div className="categories-line-4">
+      
+            <button className="collapse-button" onClick={collapseMenu}>
+              <span className="material-symbols-outlined">close</span>
             </button>
           </div>
-
-          
+          <div className="whittleit-container">
+            <button className="whittleit" onClick={() => handleButtonClick('WhittleIt')}>
+              <span className="material-symbols-outlined" style={{ fontSize: '100pt' }}>arrow_circle_right</span>
+            </button>
+          </div>
           <div className="returned-films">
-          {genreArrState.length > 0 && <ResultFilm genreArr={genreArrState} />}
+            {genreArrState.length > 0 && <ResultFilm genreArr={genreArrState} />}
           </div>
         </div>
       ) : (
+
         <button className="expand-button" onClick={toggleExpand}>
             <span class="material-symbols-outlined" style={{ fontSize: '100pt'}}>
               add_circle
@@ -178,3 +181,5 @@ close
 };
 
 export default FilterMenu;
+
+

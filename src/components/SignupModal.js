@@ -6,15 +6,15 @@ import '../styles/modalStyles.css'
 const customStyles = {
   content: {
     position: 'fixed',
-    top: '33%',
-    left: '33%',
+    top: '50%',
+    left: '50%',
     width: '33%',
     height: '33%',
-    backgroundColor: '#c0d8e0', // Pale blue background color
+    backgroundColor: 'antiquewhite',
+    transform: 'translate(-50%, -50%)',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    transform: 'translate(-50%, -50%)', // Make sure there's a comma after each property except the last one
   },
 };
 

@@ -76,7 +76,7 @@ const ResultFilm = ({ genreArr}) => {
     );
   }
 
-  // If there are no films in the list, return an empty paragraph
+
   if (!filmList || filmList.length === 0) {
     return <p></p>;
   }
@@ -87,7 +87,7 @@ const ResultFilm = ({ genreArr}) => {
         <div key={movie.id} className="returned-films-item">
           <h2>{movie.title}</h2>
           <img src={generateImageUrl(movie.imageUrl)} alt={movie.title} />
-          <p>Release Date: {movie.releaseDate}</p>
+          <p className="returned-films-date">Release Date: {movie.releaseDate}</p>
           <p>Overview: {movie.overview}</p>
         </div>
       ))}

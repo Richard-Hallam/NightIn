@@ -8,12 +8,12 @@ html, body {
 .homepage {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto 100vh auto; /* Adjust the rows */
+  grid-template-rows: auto 100vh auto; 
   gap: 0px 0px;
   grid-template-areas:
     "navbar navbar navbar"
     "title title title"
-    "returned-films returned-films returned-films"; /* Adjust grid area */
+    "returned-films returned-films returned-films"; 
   justify-items: stretch;
   
   
@@ -21,7 +21,7 @@ html, body {
 
 .title {
   grid-area: title;
-  height: 80vh; /* Set height to full viewport height */
+  height: 80vh; 
 }
 
 .returned-films {
@@ -31,18 +31,17 @@ html, body {
   justify-content: space-between;
   padding: 40px;
   gap: 20px;
-  max-height: calc(100vh - 80px); /* Adjust for padding */
-  
+  max-height: calc(100vh - 80px);
 }
 
 .loading-container {
   position: fixed;
-  bottom: 20px; /* Adjust the distance from the bottom as needed */
+  bottom: 20px; 
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Ensure it spans the entire width */
+  width: 100%;
 }

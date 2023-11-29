@@ -85,14 +85,14 @@
   @media only screen and (min-width: 769px) and (max-width: 922px) {
 
     .navtitle {
-      font-size: 40pt; /* Adjust font size for tablets */
+      font-size: 40pt; 
       margin: 2%;
     }
 
     .navbuttons button {
-      font-size: 16px; /* Adjust font size for smaller screens */
-      padding: 0 15px; /* Adjust padding for better spacing on small screens */
-      line-height: 40px; /* Adjust line height for better spacing on small screens */
+      font-size: 16px;
+      padding: 0 15px;
+      line-height: 40px; 
     }
 
     .temp-search {
@@ -104,32 +104,32 @@
 
   @media only screen and (min-width: 601px) and (max-width: 768px) {
      .navbar {
-    grid-template-columns: 1fr; /* Adjust the number of columns for tablets */
+    grid-template-columns: 1fr; 
     grid-template-areas:
-      "brand-match navbuttons"; /* Adjust the layout for tablets */
-    gap: 1px; /* Adjust gap for better spacing on tablets */
+      "brand-match navbuttons"; 
+    gap: 1px; 
     display: flex;
   }
 
   
     .navtitle {
-      font-size: 20pt; /* Adjust font size for tablets */
+      font-size: 20pt;
       margin: 2%;
     }
     
     .brand-match {
-      justify-content: space-around; /* Adjust alignment for better spacing on tablets */
+      justify-content: space-around; 
     }
   
     .navbuttons {
-      justify-content: space-around; /* Adjust alignment for better spacing on tablets */
+      justify-content: space-around; 
       margin-left: 5px;
     }
   
     .navbuttons button {
-      font-size: 16px; /* Adjust font size for tablets */
-      padding: 0 15px; /* Adjust padding for better spacing on tablets */
-      line-height: 40px; /* Adjust line height for better spacing on tablets */
+      font-size: 16px; 
+      padding: 0 15px; 
+      line-height: 40px; 
       margin-right: 10px;
     }
 
@@ -141,29 +141,29 @@
 
     @media only screen and (max-width: 600px) {
     .navbar {
-      grid-template-columns: 1fr; /* Change to a single column layout for small screens */
+      grid-template-columns: 1fr;
       grid-template-areas:
         "brand-match"
         "navbuttons";
-      gap: 1px; /* Adjust gap for better spacing on small screens */
+      gap: 1px; 
     }
   
     .navtitle {
-      font-size: 0pt; /* Adjust font size for smaller screens */
+      font-size: 0pt; 
     }
 
     .brand-match {
-      justify-content: space-around; /* Adjust alignment for better spacing on small screens */
+      justify-content: space-around; 
     }
     
     .navbuttons {
-      justify-content: space-around; /* Adjust alignment for better spacing on small screens */
+      justify-content: space-around; 
       margin-left: 5px;
     }
   
     .navbuttons button {
-      font-size: 16px; /* Adjust font size for smaller screens */
-      padding: 0 15px; /* Adjust padding for better spacing on small screens */
-      line-height: 40px; /* Adjust line height for better spacing on small screens */
-    }
+      font-size: 16px; 
+      padding: 0 15px; 
+      line-height: 40px; 
   }
+}

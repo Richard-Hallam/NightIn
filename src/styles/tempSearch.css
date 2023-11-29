@@ -8,7 +8,7 @@
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  margin-right: 20px; /* This creates a gap of 20px between the button and the search bar */
+  margin-right: 20px; 
 }
 
 .temp-search input {
@@ -16,7 +16,7 @@
   padding-left: 30px;
   padding-right: 10px;
   border: 1px solid #ccc;
-  border-radius: 30px/55%; /* Adjust the values to get the desired oblong shape */
+  border-radius: 30px/55%; 
   font-size: 12pt;
 }
 
