@@ -13,7 +13,7 @@ html, body {
     "navbar navbar navbar"
     "title title title"
     ". match-button ."
-    "resultsfilm resultsfilm resultsfilm";
+    "returned-results returned-results returned-results" ;
 
   justify-items: stretch;
   width: 100vw;
